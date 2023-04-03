@@ -9,9 +9,7 @@
 
 <br>
 
-<p align="center">
-  <video alt="Github Favorites" src=".github/Preview.mp4">
-</p>
+![preview](./.github/preview.png)
 
 <br>
 
