@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --text-primary-color: #e1e1e6;
+
+  --bg-input-color: #06181c;
+  --text-input-color: #7c7c8a;
+
+  --bg-thead-color: #092d38;
+  --tb-border-color: #4a808c;
+  --bg-tr-even: #06181c;
+  --bg-tr-odd: #030b0d;
+
+  --bg-button-color: #065e7c;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: #000000;
+  padding: 0 2rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+#app {
+  max-width: 112rem;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 8rem 0 8.7rem 0;
+}
+
+h1 {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700;
+  font-size: 3.3rem;
+  color: #fff;
+}
+
+.search {
+  display: flex;
+  gap: 0.8rem;
+}
+
+#input-search {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--text-input-color);
+
+  width: 46.2rem;
+  padding: 1.6rem;
+
+  background-color: var(--bg-input-color);
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.search button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+
+  padding: 1.2rem 3.2rem;
+  border-radius: 0.5rem;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  background-color: var(--bg-button-color);
+  color: #fff;
+
+  cursor: pointer;
+}
+
+table {
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  text-align: left;
+
+  border-spacing: 0;
+}
+
+thead {
+  background-color: var(--bg-thead-color);
+
+  border-top-left-radius: 1.2rem;
+  border-top-right-radius: 1.2rem;
+
+  border: 1px solid var(--tb-border-color);
+}
+
+thead th {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 160%;
+  color: var(--text-primary-color);
+
+  padding: 1.6rem 0 1.6rem 4rem;
+}
+
+table thead,
+table tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+thead th:first-child,
+tbody td:first-child {
+  width: 50.4rem;
+}
+
+thead tr th:last-child,
+tbody tr td:last-child {
+  width: 17.8rem;
+}
+
+table tbody {
+  display: block;
+  overflow-y: auto;
+  max-height: 62.4rem;
+
+  border-bottom-left-radius: 1.2rem;
+  border-bottom-right-radius: 1.2rem;
+
+  border-left: 1px solid var(--tb-border-color);
+  border-right: 1px solid var(--tb-border-color);
+  border-bottom: 1px solid var(--tb-border-color);
+
+  border-collapse: collapse;
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--tb-border-color);
+}
+
+tbody tr:last-child {
+  border: none;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--bg-tr-odd);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--bg-tr-even);
+}
+
+tbody tr td {
+  padding: 2.4rem 2.4rem 2.4rem 4rem;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.user a,
+.repositories,
+.followers,
+.remove {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  text-decoration: none;
+  color: var(--text-primary-color);
+}
+
+.user span {
+  font-weight: 400;
+}
+
+.user img {
+  width: 5.6rem;
+  border-radius: 50%;
+}
+
+.remove {
+  color: #f75a68;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.noFavoritesSet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+
+  height: 62.4rem;
+  background-color: #030b0d;
+
+  border-bottom-left-radius: 1.2rem;
+  border-bottom-right-radius: 1.2rem;
+
+  border-left: 1px solid var(--tb-border-color);
+  border-right: 1px solid var(--tb-border-color);
+  border-bottom: 1px solid var(--tb-border-color);
+
+  margin-bottom: 3rem;
+}
+
+.noFavoritesSet.hide {
+  display: none;
+}
+
+.noFavoritesSet img {
+  width: 13.2rem;
+  height: 12.5rem;
+}
+
+.noFavoritesSet p {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700;
+  font-size: 4rem;
+  color: #4e5455;
+}
+
+tbody::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+tbody::-webkit-scrollbar-thumb {
+  background-color: var(--tb-border-color);
+  border-radius: 1rem;
+}
+
+tbody::-webkit-scrollbar-track {
+  background-color: transparent;
+}
