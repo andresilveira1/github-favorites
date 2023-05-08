@@ -20,6 +20,20 @@
   --bg-button-color: #065e7c;
 }
 
+tbody::-webkit-scrollbar {
+  width: 0.6rem;
+  background: transparent;
+}
+
+tbody::-webkit-scrollbar-thumb {
+  background-color: var(--tb-border-color);
+  border-radius: 1rem;
+}
+
+tbody::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 body {
   font-size: 1.6rem;
   background-color: #000000;
@@ -245,18 +259,4 @@ tbody tr td {
   font-weight: 700;
   font-size: 4rem;
   color: #4e5455;
-}
-
-tbody::-webkit-scrollbar {
-  width: 0.6rem;
-  background: transparent;
-}
-
-tbody::-webkit-scrollbar-thumb {
-  background-color: var(--tb-border-color);
-  border-radius: 1rem;
-}
-
-tbody::-webkit-scrollbar-track {
-  background: transparent;
 }
