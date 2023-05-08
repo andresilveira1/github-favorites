@@ -249,6 +249,7 @@ tbody tr td {
 
 tbody::-webkit-scrollbar {
   width: 0.6rem;
+  background: transparent;
 }
 
 tbody::-webkit-scrollbar-thumb {
@@ -257,5 +258,5 @@ tbody::-webkit-scrollbar-thumb {
 }
 
 tbody::-webkit-scrollbar-track {
-  background-color: transparent;
+  background: transparent;
 }

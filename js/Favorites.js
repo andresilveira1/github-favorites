@@ -3,6 +3,7 @@ import { GithubUser } from './GithubUser.js'
 class Favorites {
   constructor(root) {
     this.root = document.querySelector(root)
+
     this.dataLoad()
   }
 
@@ -11,18 +12,18 @@ class Favorites {
       const userExists = this.entries.find(entry => entry.login === username)
 
       if (userExists) {
-        throw new Error('Usuário já cadastrado.')
+        throw new Error('Usuário já cadastrado!')
       }
 
       const user = await GithubUser.search(username)
 
       if (user.login === undefined) {
-        throw new Error('Usuário não encontrado!')
+        throw new Error('Usuário não encontrado')
       }
 
       this.entries = [user, ...this.entries]
-      this.updateView()
       this.dataSave()
+      this.updateView()
     } catch (error) {
       alert(error.message)
     }
@@ -74,7 +75,7 @@ export class FavoritesView extends Favorites {
       row.querySelector('.repositories').textContent = user.public_repos
       row.querySelector('.followers').textContent = user.followers
       row.querySelector('.remove').onclick = () => {
-        const isOk = confirm('Deseja remove esse usuário?')
+        const isOk = confirm('Deseja remover esse usuário?')
 
         if (isOk) {
           this.userDelete(user)
@@ -91,7 +92,7 @@ export class FavoritesView extends Favorites {
     searchButton.onclick = () => {
       const { value } = this.root.querySelector('#input-search')
 
-      this.githubSearch(value)
+      this.githubSearch(value.toLowerCase())
     }
   }
 
